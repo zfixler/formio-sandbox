@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="main.css" />
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.form.io/formiojs/formio.full.min.css"
+		/>
+		<script src="https://cdn.form.io/formiojs/formio.full.min.js"></script>
+		<title>Formio Example Forms</title>
+	</head>
+	<body>
+		<main>
+			<h1>Formio Form Examples</h1>
+			<section class="formSection" id="contactForm">
+				<div class="formCard">
+					<h2 class="formTitle">Contact Form</h2>
+					<div id="contact"></div>
+				</div>
+			</section>
+            <section class="formSection" id="wizardForm">
+				<div class="formCard">
+					<h2 class="formTitle">Wizard Form</h2>
+					<div id="wizard"></div>
+				</div>
+			</section>
+            <section class="formSection" id="questionnaireForm">
+				<div class="formCard ">
+					<h2 class="formTitle">Questionnaire Form</h2>
+					<div id="questionnaireForm"></div>
+				</div>
+			</section>
+            <aside class="pageButtons">
+                <button id="js-prev" class="btn btn-primary btn-md">Previous Form</button>
+                <button id="js-next" class="btn btn-primary btn-md">Next Form</button>
+            </aside>
+		</main>
+		<script type="module" src="/index.js"></script>
+	</body>
+</html>
