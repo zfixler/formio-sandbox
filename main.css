@@ -1,87 +1,131 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #edf2fb !important;
+html,
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: #edf2fb !important;
 }
 
 h1 {
-    padding: 1em 0;
+	padding: 1em 0;
 }
 
-h1, h2, h3 {
-    text-align: center;
+h1,
+h2,
+h3 {
+	text-align: center;
 }
 
 .formTitle {
-    margin-bottom: 1em;
+	margin-bottom: 1em;
 }
 
 .formCard {
-    width: min(95%, 750px);
-    margin: 0 auto;
-    background-color: #FFF;
-    padding: 2em;
-    border-radius: 5px;
-    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+	width: min(95%, 750px);
+	margin: 0 auto;
+	background-color: #fff;
+	padding: 2em;
+	border-radius: 5px;
+	box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+		rgba(17, 17, 26, 0.1) 0px 0px 8px;
 }
 
 .pageButtons {
-    margin: 2em auto;
-    display: flex;
-    justify-content: center;
-    gap: 1em;
+	margin: 2em auto;
+	display: flex;
+	justify-content: center;
+	gap: 1em;
 }
 
 .field-content {
-    flex: 0 1 auto !important;
-    width: fit-content;
-    display: flex;
-    align-items: center;
+	flex: 0 1 auto !important;
+	width: fit-content;
+	display: flex;
+	align-items: center;
 }
 
 .col-form-label {
-    max-width: 75%;
-    padding-bottom: 2em;
+	max-width: 100%;
+	padding-bottom: 2em;
 }
 
-.form-radio, .field-content {
-    flex-wrap: nowrap !important;
+.field-content {
+	flex-wrap: nowrap !important;
+    width: 50%;
+}
+
+.form-radio {
+    width: 100%;
+    margin: 0 1em 0 3em;
+	display: flex;
+	justify-content: center;
+    gap: 20%;
+}
+
+.difficultQuestion > div > div > .form-radio {
+   flex-direction: column;
+   align-items: flex-start;
+   width: fit-content;
+   margin-left: auto;
+
+}
+
+label {
+    line-height: 1.7;
 }
 
 .field-wrapper {
-    max-width: 100%;
-    justify-content: space-between;
-    border-bottom: 1px solid black;
+	max-width: 100%;
+	justify-content: space-between;
+	border-bottom: 1px solid black;
 }
 
 .form-check-inline {
-    width: 4em;
-    display: flex;
-    justify-content: center;
+    padding: 0;
+    margin: 0;
+	display: flex;
+	justify-content: center;
 }
 
 .headingsWrapper {
-    display: flex;
-    justify-content: flex-end;
-    gap: .25em;
+    width: 50%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: .25em;
+    margin-left: 1em;
+}
+
+.formHeadings {
+	display: flex;
+	justify-content: space-between;
 }
 
 .colTitle {
-    max-width: 4em;
-    font-size: 1rem;
-    margin-right: .75em;
+	max-width: 4em;
+	font-size: 1rem;
+	margin-right: 0;
 }
 
 .resultsWrapper {
-    display: flex;
-    justify-content: flex-start;
+	display: flex;
+	display: block;
 }
 
-#results, #resultSeverity {
-    margin-left: .5em;
+#results,
+#resultSeverity {
+	margin-left: 0.5em;
 }
 
-.severityScoreInput {
-    display: none;
+.patientInfo > .field-wrapper {
+	border-bottom: none;
+	margin-bottom: 2em;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.instructions {
+	max-width: 50%;
+	font-style: italic;
+	line-height: 1.7;
 }

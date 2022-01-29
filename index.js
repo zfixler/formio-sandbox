@@ -1,4 +1,4 @@
-//import json contact form
+//import json forms
 import { contactJson } from './json/contactJson.js';
 import { wizardJson } from './json/wizardJson.js';
 import { questionnaireJson } from './json/questionnaireJson.js';
@@ -36,7 +36,7 @@ Formio.createForm(document.querySelector('#wizard'), wizardJson, {
 	});
 });
 
-//Create Questionnaire Form
+//Create Health Questionnaire Form
 Formio.createForm(
 	document.querySelector('#questionnaire'),
 	questionnaireJson
@@ -52,20 +52,20 @@ const radios = document.querySelectorAll('input[type="radio"]');
 const results = document.querySelector('#results');
 // Depression Severity
 const severity = document.querySelector('#resultSeverity');
-//Hidden score input
-const hiddenScore = document.querySelector('.severityScoreInput').children[0].children[0]
 
-//Function that sets score based upon selection
+//Function that sets score based upon selections
 function setScore() {
 	let score = 0;
 	radios.forEach((radio) => {
-		if (radio.checked) {
+		if (radio.checked && radio.value.length === 1) {
 			score += parseInt(radio.value);
 		}
 	});
-    console.log(hiddenScore.value)
+
 	results.textContent = score;
-    hiddenScore.value = score;
+
+    //Set score value in hidden input for data submission
+    document.querySelector('.severityScoreInput').component.setValue(score)
 
 	if (score < 5) {
 		severity.textContent = 'Minimal severity';
@@ -78,6 +78,9 @@ function setScore() {
     } else if (score > 19){
         severity.textContent = 'Severe depression';
     }
+
+    //Set score description in hidden input for data submission
+    document.querySelector('.severityDescriptionInput').component.setValue(severity.textContent)
 }
 
 //Event listener for radio button selection
@@ -89,7 +92,7 @@ radios.forEach((radio) => {
 
 //Pagination
 const totalForms = document.querySelectorAll('.formSection');
-let selectedForm = 2;
+let selectedForm = 0;
 
 //Function to loop over forms and hide unselected forms
 function showSelectedForm() {

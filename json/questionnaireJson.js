@@ -8,6 +8,88 @@ export const questionnaireJson = {
 	},
 	components: [
 		{
+			label: 'Columns',
+			columns: [
+				{
+					components: [
+						{
+							label: 'Patient ID',
+							labelPosition: 'left-left',
+							customClass: 'patientInfo',
+							labelMargin: 0,
+							tableView: true,
+							validate: {
+								required: true,
+							},
+							key: 'patientId',
+							type: 'textfield',
+							input: true,
+						},
+					],
+					width: 6,
+					offset: 0,
+					push: 0,
+					pull: 0,
+					size: 'md',
+					currentWidth: 6,
+				},
+				{
+					components: [
+						{
+							label: 'Date',
+							customClass: 'patientInfo',
+							labelPosition: 'left-left',
+							labelMargin: 0,
+							format: 'yyyy-MM-dd',
+							placeholder: 'Select date',
+							tableView: false,
+							datePicker: {
+								disableWeekends: false,
+								disableWeekdays: false,
+							},
+							enableTime: false,
+							timePicker: {
+								showMeridian: false,
+							},
+							enableMinDateInput: false,
+							enableMaxDateInput: false,
+							key: 'date1',
+							type: 'datetime',
+							input: true,
+							widget: {
+								type: 'calendar',
+								displayInTimezone: 'viewer',
+								locale: 'en',
+								useLocaleSettings: false,
+								allowInput: true,
+								mode: 'single',
+								enableTime: false,
+								noCalendar: false,
+								format: 'yyyy-MM-dd',
+								hourIncrement: 1,
+								minuteIncrement: 1,
+								time_24hr: true,
+								minDate: null,
+								disableWeekends: false,
+								disableWeekdays: false,
+								maxDate: null,
+							},
+						},
+					],
+					width: 6,
+					offset: 0,
+					push: 0,
+					pull: 0,
+					size: 'md',
+					currentWidth: 6,
+				},
+			],
+			key: 'columns',
+			type: 'columns',
+			input: false,
+			tableView: false,
+		},
+		{
 			label: 'HTML',
 			tag: 'div',
 			className: 'headingWrapper',
@@ -18,10 +100,12 @@ export const questionnaireJson = {
 				},
 			],
 			content:
-				'<div class="formHeadings"><div class="headingsWrapper"><h3 class="colTitle">Not at all</h3><h3 class="colTitle">Several days</h3><h3 class="colTitle">More than half the days</h3><h3 class="colTitle">Nearly every day</h3></div></div>',
+				'<div class="formHeadings"><p class="instructions">Over the last 2 weeks, how often have you been bothered by any of the following problems?</p><div class="headingsWrapper"><h3 class="colTitle">Not at all</h3><h3 class="colTitle">Several days</h3><h3 class="colTitle">More than half the days</h3><h3 class="colTitle">Nearly every day</h3></div></div>',
 			refreshOnChange: false,
 			key: 'html',
 			type: 'htmlelement',
+
+            
 			input: false,
 			tableView: false,
 		},
@@ -55,11 +139,14 @@ export const questionnaireJson = {
 				},
 			],
 			dataType: 'number',
-			key: 'radio1',
+			key: 'question1',
 			attributes: {
 				name: 'radio',
 			},
 			type: 'radio',
+			validate: {
+				required: true,
+			},
 			input: true,
 		},
 		{
@@ -92,11 +179,14 @@ export const questionnaireJson = {
 				},
 			],
 			dataType: 'number',
-			key: 'radio9',
+			key: 'question9',
 			attributes: {
 				name: 'radio',
 			},
 			type: 'radio',
+			validate: {
+				required: true,
+			},
 			input: true,
 		},
 		{
@@ -129,11 +219,14 @@ export const questionnaireJson = {
 				},
 			],
 			dataType: 'number',
-			key: 'radio8',
+			key: 'question8',
 			attributes: {
 				name: 'radio',
 			},
 			type: 'radio',
+			validate: {
+				required: true,
+			},
 			input: true,
 		},
 		{
@@ -166,11 +259,14 @@ export const questionnaireJson = {
 				},
 			],
 			dataType: 'number',
-			key: 'radio7',
+			key: 'question7',
 			attributes: {
 				name: 'radio',
 			},
 			type: 'radio',
+			validate: {
+				required: true,
+			},
 			input: true,
 		},
 		{
@@ -203,12 +299,15 @@ export const questionnaireJson = {
 				},
 			],
 			dataType: 'number',
-			key: 'radio6',
+			key: 'question6',
 			attributes: {
 				name: 'radio',
 			},
 			type: 'radio',
 			input: true,
+			validate: {
+				required: true,
+			},
 		},
 		{
 			label:
@@ -241,11 +340,14 @@ export const questionnaireJson = {
 				},
 			],
 			dataType: 'number',
-			key: 'radio5',
+			key: 'question5',
 			attributes: {
 				name: 'radio',
 			},
 			type: 'radio',
+			validate: {
+				required: true,
+			},
 			input: true,
 		},
 		{
@@ -279,11 +381,14 @@ export const questionnaireJson = {
 				},
 			],
 			dataType: 'number',
-			key: 'radio4',
+			key: 'question4',
 			attributes: {
 				name: 'radio',
 			},
 			type: 'radio',
+			validate: {
+				required: true,
+			},
 			input: true,
 		},
 		{
@@ -317,11 +422,14 @@ export const questionnaireJson = {
 				},
 			],
 			dataType: 'number',
-			key: 'radio3',
+			key: 'question3',
 			attributes: {
 				name: 'radio',
 			},
 			type: 'radio',
+			validate: {
+				required: true,
+			},
 			input: true,
 		},
 		{
@@ -355,11 +463,14 @@ export const questionnaireJson = {
 				},
 			],
 			dataType: 'number',
-			key: 'radio2',
+			key: 'question2',
 			attributes: {
 				name: 'radio',
 			},
 			type: 'radio',
+			validate: {
+				required: true,
+			},
 			input: true,
 		},
 		{
@@ -373,44 +484,51 @@ export const questionnaireJson = {
 			values: [
 				{
 					label: 'Not difficult at all',
-					value: 0,
+					value: 'Not difficult at all',
 					shortcut: '',
 				},
 				{
 					label: 'Somewhat difficult',
-					value: 1,
+					value: 'Somewhat difficult',
 					shortcut: '',
 				},
 				{
 					label: 'Very difficult',
-					value: 2,
+					value: 'Very difficult',
 					shortcut: '',
 				},
 				{
 					label: 'Extremely difficult',
-					value: 3,
+					value: 'Extremely difficult',
 					shortcut: '',
 				},
 			],
-			dataType: 'number',
-			key: 'radio10',
+			dataType: 'string',
+			key: 'question10',
 			attributes: {
 				name: 'radio',
 			},
 			type: 'radio',
+			validate: {
+				required: true,
+			},
 			input: true,
 		},
 		{
-			label: 'severityScore',
+			label: 'severityScoreInput',
 			customClass: 'severityScoreInput',
-			hidden: false,
-			hideLabel: true,
-			mask: false,
-			tableView: false,
-			clearOnHide: false,
-			key: 'severityScore',
-			type: 'textfield',
+			key: 'severityScoreInput',
+			type: 'hidden',
 			input: true,
+			tableView: false,
+		},
+		{
+			label: 'severityDescriptionInput',
+			customClass: 'severityDescriptionInput',
+			key: 'severityDescriptionInput',
+			type: 'hidden',
+			input: true,
+			tableView: false,
 		},
 		{
 			label: 'results',
@@ -440,7 +558,7 @@ export const questionnaireJson = {
 				},
 			],
 			content:
-				'<p><strong>Depression Severity:</strong><span id="resultSeverity"></span></p>',
+				'<p><strong>Description:</strong><span id="resultSeverity"></span></p>',
 			refreshOnChange: false,
 			key: 'resultSeverity',
 			type: 'htmlelement',
