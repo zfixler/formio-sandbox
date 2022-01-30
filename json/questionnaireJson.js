@@ -105,7 +105,6 @@ export const questionnaireJson = {
 			key: 'html',
 			type: 'htmlelement',
 
-            
 			input: false,
 			tableView: false,
 		},

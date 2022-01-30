@@ -64,23 +64,25 @@ function setScore() {
 
 	results.textContent = score;
 
-    //Set score value in hidden input for data submission
-    document.querySelector('.severityScoreInput').component.setValue(score)
+	//Set score value in hidden input for data submission
+	document.querySelector('.severityScoreInput').component.setValue(score);
 
 	if (score < 5) {
 		severity.textContent = 'Minimal severity';
-	} else if (score > 4 && score < 10){
-        severity.textContent = 'Mild depression';
-    } else if (score > 9 && score < 15){
-        severity.textContent = 'Moderate depression';
-    } else if (score > 14 && score < 20){
-        severity.textContent = 'Moderately severe depression';
-    } else if (score > 19){
-        severity.textContent = 'Severe depression';
-    }
+	} else if (score > 4 && score < 10) {
+		severity.textContent = 'Mild depression';
+	} else if (score > 9 && score < 15) {
+		severity.textContent = 'Moderate depression';
+	} else if (score > 14 && score < 20) {
+		severity.textContent = 'Moderately severe depression';
+	} else if (score > 19) {
+		severity.textContent = 'Severe depression';
+	}
 
-    //Set score description in hidden input for data submission
-    document.querySelector('.severityDescriptionInput').component.setValue(severity.textContent)
+	//Set score description in hidden input for data submission
+	document
+		.querySelector('.severityDescriptionInput')
+		.component.setValue(severity.textContent);
 }
 
 //Event listener for radio button selection
