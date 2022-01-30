@@ -572,5 +572,11 @@ export const questionnaireJson = {
 			input: true,
 			tableView: false,
 		},
+        {
+			type: 'button',
+			action: 'reset',
+			label: 'Reset Form',
+			theme: 'success',
+		},
 	],
 };
