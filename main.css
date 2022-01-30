@@ -37,6 +37,15 @@ h3 {
 	gap: 1em;
 }
 
+.page-item {
+    cursor: default;
+    pointer-events: none;
+}
+
+.field-label {
+    width: fit-content;
+}
+
 .field-content {
 	flex: 0 1 auto !important;
 	width: fit-content;
@@ -118,10 +127,16 @@ label {
 }
 
 .patientInfo > .field-wrapper {
+    width: 100%;
 	border-bottom: none;
 	margin-bottom: 2em;
 	display: flex;
 	justify-content: flex-start;
+}
+
+.patientInfo > .field-wrapper > div.field-label {
+    flex: none !important;
+    padding-right: 1em;
 }
 
 .instructions {

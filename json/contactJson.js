@@ -30,13 +30,18 @@ export const contactJson = {
 							input: true,
 						},
 						{
-							label: 'Phone Number',
+							label: 'Last Name',
+							placeholder: 'Please enter your last name',
+							autocomplete: 'off',
 							tableView: true,
 							validate: {
-								customMessage: 'Please enter your phone number.',
+								required: true,
+								minLength: 3,
+								maxLength: 50,
+								customMessage: 'Please enter your last name.',
 							},
-							key: 'phoneNumber',
-							type: 'phoneNumber',
+							key: 'lastName',
+							type: 'textfield',
 							input: true,
 						},
 					],
@@ -50,18 +55,14 @@ export const contactJson = {
 				{
 					components: [
 						{
-							label: 'Last Name',
-							placeholder: 'Please enter your last name',
-							autocomplete: 'off',
+							label: 'Phone Number',
 							tableView: true,
 							validate: {
 								required: true,
-								minLength: 3,
-								maxLength: 50,
-								customMessage: 'Please enter your last name.',
+								customMessage: 'Please enter your phone number.',
 							},
-							key: 'lastName',
-							type: 'textfield',
+							key: 'phoneNumber',
+							type: 'phoneNumber',
 							input: true,
 						},
 						{
@@ -419,6 +420,7 @@ export const contactJson = {
 							dataType: 'number',
 							idPath: 'age',
 							validate: {
+								required: true,
 								customMessage: 'Please select your age.',
 							},
 							key: 'age',
