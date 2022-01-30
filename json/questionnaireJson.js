@@ -178,7 +178,7 @@ export const questionnaireJson = {
 				},
 			],
 			dataType: 'number',
-			key: 'question9',
+			key: 'question2',
 			attributes: {
 				name: 'radio',
 			},
@@ -218,7 +218,7 @@ export const questionnaireJson = {
 				},
 			],
 			dataType: 'number',
-			key: 'question8',
+			key: 'question3',
 			attributes: {
 				name: 'radio',
 			},
@@ -258,7 +258,7 @@ export const questionnaireJson = {
 				},
 			],
 			dataType: 'number',
-			key: 'question7',
+			key: 'question4',
 			attributes: {
 				name: 'radio',
 			},
@@ -298,7 +298,7 @@ export const questionnaireJson = {
 				},
 			],
 			dataType: 'number',
-			key: 'question6',
+			key: 'question5',
 			attributes: {
 				name: 'radio',
 			},
@@ -339,7 +339,7 @@ export const questionnaireJson = {
 				},
 			],
 			dataType: 'number',
-			key: 'question5',
+			key: 'question6',
 			attributes: {
 				name: 'radio',
 			},
@@ -380,7 +380,7 @@ export const questionnaireJson = {
 				},
 			],
 			dataType: 'number',
-			key: 'question4',
+			key: 'question7',
 			attributes: {
 				name: 'radio',
 			},
@@ -421,7 +421,7 @@ export const questionnaireJson = {
 				},
 			],
 			dataType: 'number',
-			key: 'question3',
+			key: 'question8',
 			attributes: {
 				name: 'radio',
 			},
@@ -462,7 +462,7 @@ export const questionnaireJson = {
 				},
 			],
 			dataType: 'number',
-			key: 'question2',
+			key: 'question9',
 			attributes: {
 				name: 'radio',
 			},
